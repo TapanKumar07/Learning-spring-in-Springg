@@ -6,6 +6,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext("com.freecharge");
+        MyApp mp = (MyApp) ctx.getBean("myApp");
+        mp.greet_me();
     }
 }
 
@@ -41,4 +43,12 @@ Spring -> brings loose coupling with itself automatically (dont care of factory)
     AnnotationContext ctx = new AnnotationConfigApplicationContext(Packag Name);
     for fetching
     Person p = (Person)ctx.getBean("person")
+
+    Spring Boot -> Auto (Minimal) Configration -> less headache
+
+    How to create spring project ?
+     1. Create Maven project
+     2. Spring boot cli
+     3. IDE
+     4. Spring initializer
 */
